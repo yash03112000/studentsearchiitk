@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3.js collapsible tree with boxes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="stylesheet" type="text/css" href="tree-boxes.css"> -->
+    <style>
+      #tree-container {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}
+
+.svgContainer {
+	display: block;
+    margin: auto;
+}
+
+.node {
+	cursor: pointer;
+}
+
+
+
+.node-rect-closed {
+	stroke-width: 2px;
+	stroke: rgb(0,0,0);
+}
+
+.link {
+	fill: none;
+	stroke: lightsteelblue;
+	stroke-width: 2px;
+}
+
+.linkselected {
+	fill: none;
+	stroke: tomato;
+	stroke-width: 2px;
+}
+
+.arrow {
+	fill: lightsteelblue;
+	stroke-width: 1px;
+}
+
+.arrowselected {
+	fill: tomato;
+	stroke-width: 2px;
+}
+
+.link text {
+	font: 7px sans-serif;
+	fill: #CC0000;
+}
+
+.wordwrap {
+	white-space: pre-wrap; /* CSS3 */
+	white-space: -moz-pre-wrap; /* Firefox */
+	white-space: -pre-wrap; /* Opera <7 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* IE */
+}
+
+.node-text {
+	font: 7px sans-serif;
+	color: white;
+}
+
+.tooltip-text-container {
+    height: 100%;
+	width: 100%;
+}
+
+.tooltip-text {
+	visibility: hidden;
+	font: 7px sans-serif;
+	color: white;
+	display: block;
+ 	padding: 5px;
+}
+.tooltip-image {
+	visibility: hidden;
+	/* font: 7px sans-serif;
+	color: white;
+	display: block;
+ 	padding: 5px; */
+}
+.tooltip-box {
+	background: rgba(0, 0, 0, 0.7);
+	visibility: hidden;
+	position: absolute;
+	border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-top-right-radius: 0.5em;
+}
+
+p {
+	display: inline;
+}
+
+.textcolored {
+	color: orange;
+}
+
+a.exchangeName {
+	color: orange;
+}
+#search{
+	position: fixed;
+	z-index: 100;
+	/* pointer-events: none; */
+	background-color: #faf9f5;
+	padding: 20px;
+	border-radius: 50px;
+}
+#input{
+	border-radius: 10px;
+	padding:10px
+}
+#button{
+	border-radius: 10px;
+	padding:10px
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+    <script src="js/tree.js" type="text/javascript"></script>
+  </head>
+  <body>
+	
+	<form action="" id="search">
+		<input type="text" id="input" >
+		<input type="button" id="button" value="Search">
+	</form>
+    <div class="container">
+        <ct-visualization id="tree-container"></ct-visualization>
+        <script>
+            
+        </script>
+    </div>
+</body>
+</html>

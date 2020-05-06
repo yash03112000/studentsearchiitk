@@ -1,0 +1,45 @@
+#games-container
+      each student,i in students
+            .flip-container.game
+                .flipper
+                    a(href='#')
+                        .front
+                            img(src='photos/'+student.roll+'.jpg', alt='Avatar', style='width:50%;height:100%;')
+                            h4
+                                b= student.name
+                            h5= student.roll
+                            h5= student.dept
+
+                        .back
+                            img.img-circle(src='photos/'+student.roll+'.jpg', alt='Avatar', style='width:40%;height:20%;')
+                            p.backtext
+                                span= student.name
+                                br
+                                span= student.roll
+                                br
+                                span= student.prog+','
+                                span= student.dept
+                            p.backtext2
+                                span 
+                                    b IITK Add  :  
+                                span= student.host
+                                br
+                                span 
+                                    b Home Add  :  
+                                span= student.add
+                                br
+                                span 
+                                    b Blood :  
+                                span= student.blood
+                                br
+                                span 
+                                    b Email  :  
+                                span= student.uname
+                            //- h6= student.name
+                            //- h5= student.roll
+                            //- h5= student.dept
+                            //- h5= student.host
+                            //- span.glyphicon.glyphicon-envelope 
+                            //- h5= student.uname
+                            //- h5= student.blood    
+  

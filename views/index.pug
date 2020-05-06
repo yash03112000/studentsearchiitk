@@ -1,0 +1,69 @@
+extends layout
+    
+block content  
+    h1.maintitle #{title}
+    .container.pehla
+        form(onsubmit="searchPartial(this);return false;")
+            #form-group
+                label Name,Username,Roll:
+                input.form-control(name='name', type='text')
+            br
+            .dropdown
+                label Gender:
+                select(name='gender')
+                    option(value='') Any
+                    option(value='M') Male
+                    option(value='F') Female
+            #form-group.dropdown
+                label Blood Group:
+                select(name='blood')
+                    option(value='') Any
+                    option(value='A+') A+
+                    option(value='A-') A-
+                    option(value='B+') B+
+                    option(value='B-') B-
+                    option(value='AB+') AB+
+                    option(value='AB-') AB-
+                    option(value='O+') O+
+                    option(value='O-') O-
+                br
+            #form-group
+                label Department:
+                select(name='dept')
+                    option(value='') Any
+                    each dept,i in depts
+                        option(value= dept)= dept 
+                br
+            #form-group
+                label Programme:
+                select(name='prog')
+                    option(value='') Any
+                    each prog,i in progs
+                        option(value= prog)= prog 
+                br    
+            #form-group
+                label Hall:
+                select(name='hall')
+                    option(value='') Any
+                    each hall,i in halls
+                        option(value= hall)= hall 
+                br
+            #form-group
+                label Year:
+                select(name='year')
+                    option(value='') Any
+                    each year,i in years
+                        option(value= year)= year 
+                br
+            #form-group
+                label Hometown:
+                input.form-control(name='name', type='text')
+            br    
+            br
+            input.btn.btn-primary(type='submit',value='Submit')
+            br
+            br
+    br
+    br                
+    #search-result.container.doosra
+    

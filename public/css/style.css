@@ -1,0 +1,291 @@
+.navcustom{
+    border-radius: 0px;
+}
+.maintitle{
+    width:100%;
+    text-align:center;
+}
+.pehla{
+    background-color: rgb(207, 207, 207);
+    width:60%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.doosra{
+    width:70%;
+    /*background-color: gold;*/
+}
+
+input[type=text] {
+    background: white;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 0px;
+    
+}
+select {
+    width: 30%;
+    
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    z-index: 1;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    z-index: 1;
+   /* background-color: blue;*/
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg) scale(3); 
+    z-index: 2;
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    padding:0px;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+  }
+  .img{
+      height:120%;
+      width: 35%;
+      background-color: green;
+      float: left;
+  }
+  .text{
+      background-color:white;
+      height:120%;
+      width: 65%;
+      float: right;
+  }
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    width: 100%;
+    height: 100%;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: rotateY(180deg);
+  }
+.result li{
+    margin-bottom:10px;
+    margin-top:10px;
+   /* background-color: red;*/
+    border:none;
+}
+/* make things pretty */
+#games-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#games-container div.game {
+  margin: 0 8px 15px;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+span.game-title {
+  background-color: rgba(25, 25, 25, 0.6);
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  margin-bottom: 25px;
+  text-align: center;
+  z-index: 1;
+}
+
+span.game-title h3 {
+  padding: 5px;
+}
+
+.game h3,
+.game:hover span.game-title {
+  color: silver;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.game:hover h3,
+.game:hover span.game-title {
+  color: #fff;
+  background-color: #0c0c0c;
+}
+
+.game a {
+  display: block;
+}
+
+.back>.button {
+  position: relative;
+  z-index: 1;
+}
+
+.button {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px auto;
+  width: 70%;
+  clear: both;
+  color: #fff;
+}
+
+button a {
+  text-decoration: none;
+  color: #e5e5e5;
+  display: block;
+  transition: ease-in 0.12s;
+}
+
+button.green:hover {
+  background-color: #00B200;
+}
+
+button:hover a {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.back>.button.green {
+  margin-top: 45px;
+}
+
+button {
+  color: #000;
+  border: none;
+}
+
+button.green {
+  background-color: #419907;
+  transition: background-color 0.4s ease-in;
+  -webkit-transition: background-color 0.4s ease-in;
+}
+
+button.blue {
+  background-color: #063e9b;
+  transition: background-color 0.4s ease-in;
+  -webkit-transition: background-color 0.4s ease-in
+}
+
+/* end of making things pretty*/
+
+
+
+/* do some flipping */
+
+.flip-container {
+  perspective: 900px;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+}
+
+.flip-container:hover .back {
+  transform: rotateY(0deg);
+  z-index: 4;
+}
+
+.flip-container:hover .front {
+  transform: rotateY(180deg);
+}
+
+#games-container div.game:hover {
+  transform: scaleX(1.25) scaleY(3.25);
+  -webkit-transform: scaleX(1.25) scaleY(3.25);
+  -ms-transform: scaleX(1.25) scaleY(3.25);
+  z-index: 2;
+}
+
+.flip-container{
+  width: 45%;
+  height:150px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.9s;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100%;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: white;
+  color: #000;
+  text-align: center;
+}
+.front img{
+  float: left;
+}
+.back img{
+  position: relative;
+  top:5px;
+}
+
+.back {
+  transform: rotateY(-180deg);
+  background-color: #f9fbfc;
+  text-align:center;
+}
+.backtext{
+  position: relative;
+  top:10px;
+  font-family: Times New Roman;
+  line-height: 1;
+  color:black;
+  font-size: 8px;
+}
+.backtext2{
+  position: relative;
+  top:10px;
+  text-align: left;
+  left:10%;
+  font-family: Times New Roman;
+  line-height: 1;
+  color:black;
+  font-size: 10px;
+}
