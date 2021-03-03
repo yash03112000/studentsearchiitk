@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.4",
     "node-image-downloader": "^1.0.7",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "puppeteer": "^2.1.1",
     "request": "^2.88.2"
   },
